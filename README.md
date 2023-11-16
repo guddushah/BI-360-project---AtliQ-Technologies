@@ -13,5 +13,35 @@
 - DAX language
 - DAX Studio
 
+### Domain related terms understanding
+- #### Gross Price
+- #### Pre-Invoice deductions
+- #### Net Invoice Sales
+- #### Post-Invoice deductions
+- #### Net Sales
+- #### COGs (Cost of Goods Sold)
+- #### Gross Margin
+- #### Operational Expense
+- #### Net Profit
+
+### Steps prior to Dashboard building and publishing 
+- #### Creating a Project Charter incorporating the project objective, hopes & fears, success measures, stakeholders involvement, and claearing the dashboards design concepts.
+- #### Getting the data and importing in the MySQL environment.
+- #### Streamlining the process of incorporating the real-time data into Power BI by connecting with MySQL server.
+- #### Using Power Query for cleaning, modifying, merging tables in the databse schema
+- #### Employed an iterative design process, adhering to 15 established design principles to ensure the dashboards were both user-friendly and informative.
+- #### Worked closely with stakeholders to validate the functionality and precision of the dashboards, making enhancements based on their feedback.
+- #### Actively integrated suggestions and modifications from end-users to improve the dashboards' usefulness.
+- #### Conducted an in-depth analysis of DAX queries using DAX Studio, optimizing them for quicker data retrieval and rendering.
+- #### Published the dashboards to the Power BI service, providing access to pertinent teams to acquire critical business insights.
+
+### Report Views 
+- #### Info View
+- #### Finance View
+- #### Sales View
+- #### Marketing View
+- #### Supply Chain View
+- #### Executive View
+- #### Support View
 
 
