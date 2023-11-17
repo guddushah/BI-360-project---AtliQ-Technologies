@@ -6,6 +6,7 @@
 ### Objective
 #### The objective of this project is to build an enterpeise wide business intelligence and data driven decision making dashboard giving the insights about finance, sales, marketing and supply chanin sectors of the businesses happening globally.
 
+### Dashboard Live at https://www.novypro.com/project/bi-360-dashboard
 ### Tools Used
 - MySQL
 - Power BI Desktop
