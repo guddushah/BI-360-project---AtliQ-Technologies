@@ -21,7 +21,8 @@ AtliQ Technologies, a swiftly expanding electronics company, incurred significan
 - **Supply Chain View** - Reliability, Forecast Accuracy in a view to understand Supply Chain performance.
 - **Executive View** - Integrated view of key insights for executives.
 
-
+## Dashboard Live here
+https://app.powerbi.com/view?r=eyJrIjoiMjk0ZDQwOTctMzkzNi00ZGVmLWFmZGUtMjI3YTA1NmVmYzkwIiwidCI6Ijc5OWU3OTRjLTllYWMtNGUxZi05ZjY0LTE0ODhjYjMyMjRlNiJ9&pageName=ReportSectionacc5f42f533380d008e0
 
 
 ## Objective
