@@ -22,7 +22,7 @@ AtliQ Technologies, a swiftly expanding electronics company, incurred significan
 - **Executive View** - Integrated view of key insights for executives.
 
 ## Steps prior to Report Building and Publishng 
- -Creating a Project Charter incorporating the project objective, hopes & fears, success measures, stakeholders involvement, and claearing the dashboards design concepts.
+- Creating a Project Charter incorporating the project objective, hopes & fears, success measures, stakeholders involvement, and claearing the dashboards design concepts.
 - Getting the data and importing in the MySQL environment.
 - Streamlining the process of incorporating the real-time data into Power BI by connecting with MySQL server.
 - Using Power Query for cleaning, modifying, merging tables in the databse schema
