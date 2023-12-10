@@ -52,15 +52,19 @@ https://app.powerbi.com/view?r=eyJrIjoiMjk0ZDQwOTctMzkzNi00ZGVmLWFmZGUtMjI3YTA1N
 
 ### Sales View
 ![salesView](https://github.com/guddushah/BI-360-project-AtliQ-Technologies-PowerBI/assets/40028193/54d8f68e-69de-46f7-8b3a-321dead3b10b)
-- The Sales View helps to drill down the performances of Customers in different regions.
-- This View provides the in-depth information about the Pre-Invoice Deductions, Post-Invoice Deductions, Net Sales, COGS, Gross Margin, GM % incurred from all the customers.
+- The Sales View helps to drill down the performances of Customers in different regions for Sales Department.
+- This View provides the in-depth information about the Pre-Invoice Deductions, Post-Invoice Deductions, Net Sales, Gross Margin, GM % incurred from all the customers.
 - It also provides product wise performance in different segements.
 - This Benchmark metric in the View helps Stakeholders in comparing the performance of Customers with the Last Year and targets to be achieved in the future.
+- This View helps in finding out the potential customers in different regions and helping them to grow the business further.
 
 ### Marketing View
 ![marketingView](https://github.com/guddushah/BI-360-project-AtliQ-Technologies-PowerBI/assets/40028193/f55cce32-4848-48f4-bec9-8121a6d295a6)
-
-
+- The Marketing View helps to drill down the performances of Products in different segments for Marketing Department.
+- This View provides the in-depth information about the Net Sales, COGS, Gross Margin, GM %, Net Profit, Net Profit % incurred from all the products.
+- It provides performance metric of the products with different divisions of the segments.
+- It provides customer wise performance in different regions and markets.
+- This View is helpful for the stakeholders in budgeting for the products and figuring out the potential customers and markets for business growth.
 ### Supply Chain View
 ![supplyChainView](https://github.com/guddushah/BI-360-project-AtliQ-Technologies-PowerBI/assets/40028193/7aa0e201-3e76-4cba-b662-585dfaefe48f)
 
