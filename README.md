@@ -1,5 +1,5 @@
 # BI 360 Project
-**The Business Insights 360 Project is a part Project based Certification from Codebasics *Get Job Ready: Power BI Data Analytics for All Levels 2.0* **
+**The Business Insights 360 Project is a part Project based Certification from Codebasics *Get Job Ready: Power BI Data Analytics for All Levels 2.0***
 
 ## Problem Statement
 AtliQ Technologies, a swiftly expanding electronics company, incurred significant losses in Latin America attributed to their reliance on Excel files and decisions made based on intuition in the Annual Strategic Meeting. Also, The rising competition in the consumer electronics sector prompted the company to embrace data analytics and adopt decision-making based on data insights.
