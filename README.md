@@ -60,11 +60,6 @@ https://app.powerbi.com/view?r=eyJrIjoiMjk0ZDQwOTctMzkzNi00ZGVmLWFmZGUtMjI3YTA1N
 ### Executive View
 ![executiveView](https://github.com/guddushah/BI-360-project-AtliQ-Technologies-PowerBI/assets/40028193/7c20b20b-0562-4436-8998-4b058cc84dcb)
 
-
-## Objective
-The objective of this project is to build an enterpeise wide business intelligence and data driven decision making dashboard giving the insights about finance, sales, marketing and supply chanin sectors of the businesses happening globally.
-
-### Dashboard Live at https://www.novypro.com/project/bi-360-dashboard
 ### Tools Used
 - MySQL
 - Power BI Desktop
@@ -83,15 +78,5 @@ The objective of this project is to build an enterpeise wide business intelligen
 - Operational Expense
 - Net Profit
 
-
-
-### Report Views 
-- Info View
-- Finance View
-- Sales View
-- Marketing View
-- Supply Chain View
-- Executive View
-- Support View
 
 
