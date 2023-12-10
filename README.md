@@ -38,8 +38,8 @@ AtliQ Technologies, a swiftly expanding electronics company, incurred significan
 https://app.powerbi.com/view?r=eyJrIjoiMjk0ZDQwOTctMzkzNi00ZGVmLWFmZGUtMjI3YTA1NmVmYzkwIiwidCI6Ijc5OWU3OTRjLTllYWMtNGUxZi05ZjY0LTE0ODhjYjMyMjRlNiJ9&pageName=ReportSectionacc5f42f533380d008e0
 
 ## Created Dashboard
-- The created Dashboard basically contains 5 Views - Finance View, Sales View, Marketing View, Supply Chain View and Executive View.
-- The Dashboard has two more additional views, i.e., Home and Support View for providing the basic information about the Dashboard.
+- The created Dashboard basically contains 5 Views - Finance View, Sales View, Marketing View, Supply Chain View and Executive View for serving several stakeholders requirements
+- The Dashboard has two more additional views, i.e., Home View, for providing the summary of all the 5 Views along with page navigation to a particular View and Support View for raising issues and feedback.
   
 ### Finance View
 ![financeView](https://github.com/guddushah/BI-360-project-AtliQ-Technologies-PowerBI/assets/40028193/6ca4e301-3f95-4548-9ae3-88be61b2e861)
