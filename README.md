@@ -21,6 +21,17 @@ AtliQ Technologies, a swiftly expanding electronics company, incurred significan
 - **Supply Chain View** - Reliability, Forecast Accuracy in a view to understand Supply Chain performance.
 - **Executive View** - Integrated view of key insights for executives.
 
+## Steps prior to Report Building and Publishng 
+ -Creating a Project Charter incorporating the project objective, hopes & fears, success measures, stakeholders involvement, and claearing the dashboards design concepts.
+- Getting the data and importing in the MySQL environment.
+- Streamlining the process of incorporating the real-time data into Power BI by connecting with MySQL server.
+- Using Power Query for cleaning, modifying, merging tables in the databse schema
+- Employed an iterative design process, adhering to 15 established design principles to ensure the dashboards were both user-friendly and informative.
+- Worked closely with stakeholders to validate the functionality and precision of the dashboards, making enhancements based on their feedback.
+- Actively integrated suggestions and modifications from end-users to improve the dashboards' usefulness.
+- Conducted an in-depth analysis of DAX queries using DAX Studio, optimizing them for quicker data retrieval and rendering.
+- Published the dashboards to the Power BI service, providing access to pertinent teams to acquire critical business insights.
+  
 ## Dashboard Live here
 https://app.powerbi.com/view?r=eyJrIjoiMjk0ZDQwOTctMzkzNi00ZGVmLWFmZGUtMjI3YTA1NmVmYzkwIiwidCI6Ijc5OWU3OTRjLTllYWMtNGUxZi05ZjY0LTE0ODhjYjMyMjRlNiJ9&pageName=ReportSectionacc5f42f533380d008e0
 
@@ -66,16 +77,7 @@ The objective of this project is to build an enterpeise wide business intelligen
 - Operational Expense
 - Net Profit
 
-### Steps prior to Dashboard building and publishing 
- Creating a Project Charter incorporating the project objective, hopes & fears, success measures, stakeholders involvement, and claearing the dashboards design concepts.
-- Getting the data and importing in the MySQL environment.
-- Streamlining the process of incorporating the real-time data into Power BI by connecting with MySQL server.
-- Using Power Query for cleaning, modifying, merging tables in the databse schema
-- Employed an iterative design process, adhering to 15 established design principles to ensure the dashboards were both user-friendly and informative.
-- Worked closely with stakeholders to validate the functionality and precision of the dashboards, making enhancements based on their feedback.
-- Actively integrated suggestions and modifications from end-users to improve the dashboards' usefulness.
-- Conducted an in-depth analysis of DAX queries using DAX Studio, optimizing them for quicker data retrieval and rendering.
-- Published the dashboards to the Power BI service, providing access to pertinent teams to acquire critical business insights.
+
 
 ### Report Views 
 - Info View
