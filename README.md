@@ -44,7 +44,11 @@ https://app.powerbi.com/view?r=eyJrIjoiMjk0ZDQwOTctMzkzNi00ZGVmLWFmZGUtMjI3YTA1N
   
 ### Finance View
 ![financeView](https://github.com/guddushah/BI-360-project-AtliQ-Technologies-PowerBI/assets/40028193/6ca4e301-3f95-4548-9ae3-88be61b2e861)
-
+- The Finance View shows Profit & Loss Statement, Net Sales performances over time, Top/Bottom 5 Products in different segments and Top/Bottom 5 Customers in different regions.
+- The Profit & Loss Statement shows the performance of products Year over Year.
+- This View also has 3 KPI's (Key Performance Index) showing the Net Sales, Gross Margin %, Net Profit % comparison with BenchMark.
+- The Benchmark is a slicer in the View which provides Net Sales Performance Vs Last Year and Net Sales Performance Vs Target.
+- This metric helps Stakeholders in comparing the performance with the Last Year and targets to be achieved in the future.
 
 ### Sales View
 ![salesView](https://github.com/guddushah/BI-360-project-AtliQ-Technologies-PowerBI/assets/40028193/54d8f68e-69de-46f7-8b3a-321dead3b10b)
@@ -64,9 +68,9 @@ https://app.powerbi.com/view?r=eyJrIjoiMjk0ZDQwOTctMzkzNi00ZGVmLWFmZGUtMjI3YTA1N
 ### Tools Used
 - MySQL
 - Power BI Desktop
-- Power Query M formula language
-- DAX language
+- MS. Excel
 - DAX Studio
+- Power BI Service
 
 ### Domain related terms understanding
 - Gross Price
