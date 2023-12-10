@@ -52,7 +52,10 @@ https://app.powerbi.com/view?r=eyJrIjoiMjk0ZDQwOTctMzkzNi00ZGVmLWFmZGUtMjI3YTA1N
 
 ### Sales View
 ![salesView](https://github.com/guddushah/BI-360-project-AtliQ-Technologies-PowerBI/assets/40028193/54d8f68e-69de-46f7-8b3a-321dead3b10b)
-
+- The Sales View helps to drill down the performances of Customers in different regions.
+- This View provides the in-depth information about the Net Sales, COGS, Gross Margin, GM % incurred from all the customers.
+- It also provides product wise performance in different segements.
+- This Benchmark metric in the View helps Stakeholders in comparing the performance of Customers with the Last Year and targets to be achieved in the future.
 
 ### Marketing View
 ![marketingView](https://github.com/guddushah/BI-360-project-AtliQ-Technologies-PowerBI/assets/40028193/f55cce32-4848-48f4-bec9-8121a6d295a6)
