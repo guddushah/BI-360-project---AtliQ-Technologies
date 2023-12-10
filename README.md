@@ -21,16 +21,18 @@ AtliQ Technologies, a swiftly expanding electronics company, incurred significan
 - **Supply Chain View** - Reliability, Forecast Accuracy in a view to understand Supply Chain performance.
 - **Executive View** - Integrated view of key insights for executives.
 
-## Steps prior to Report Building and Publishng 
-- Creating a Project Charter incorporating the project objective, hopes & fears, success measures, stakeholders involvement, and claearing the dashboards design concepts.
-- Getting the data and importing in the MySQL environment.
-- Streamlining the process of incorporating the real-time data into Power BI by connecting with MySQL server.
-- Using Power Query for cleaning, modifying, merging tables in the databse schema
-- Employed an iterative design process, adhering to 15 established design principles to ensure the dashboards were both user-friendly and informative.
-- Worked closely with stakeholders to validate the functionality and precision of the dashboards, making enhancements based on their feedback.
-- Actively integrated suggestions and modifications from end-users to improve the dashboards' usefulness.
-- Conducted an in-depth analysis of DAX queries using DAX Studio, optimizing them for quicker data retrieval and rendering.
-- Published the dashboards to the Power BI service, providing access to pertinent teams to acquire critical business insights.
+## Steps for Project Execution
+1. Creating a Project Charter incorporating the project objective, hopes & fears, success measures, stakeholders involvement, and claearing the dashboards design concepts.
+2. Streamlining the process of incorporating the real-time data into Power BI by connecting with MySQL server.
+3. Using Power Query for cleaning, modifying, merging tables in Power BI.
+4. Review and deleted the Database relationship created by Power BI by default.Also, creating the required additional dimension table in Power Query.
+5. Data validation using some tables in Power BI and matching the values with the data provided.
+6. Data modelling is done by connecting different tables using a foreign key and primary key. In this project, Snowflake Schema is used for Data Modelling where all the dimension tables were connected with Fact tables and some of the dimension table were further splitted to granular dimension tables for overcoming redundancy of data.
+7. Then, Creating calculated columns using more Power Query and DAX formulas (Formulas listed at the bottom). After the columns were created, verified them in either MySQL or Excel file.
+8. This was the last step before start creating the design work and building the dashboards. This step was to optimize the report to reduce the report/file size. This is an important step which helps in reducing the file size so that is easy to share and access by users.
+9. Publishing the fully working dashboard to the Power BI service, providing access to pertinent teams to acquire critical business insights.
+10. Worked closely with stakeholders to validate the functionality and precision of the dashboards, making enhancements based on their feedback.
+11. Actively integrated suggestions and modifications from end-users to improve the dashboards' usefulness.
   
 ## Dashboard Live here
 https://app.powerbi.com/view?r=eyJrIjoiMjk0ZDQwOTctMzkzNi00ZGVmLWFmZGUtMjI3YTA1NmVmYzkwIiwidCI6Ijc5OWU3OTRjLTllYWMtNGUxZi05ZjY0LTE0ODhjYjMyMjRlNiJ9&pageName=ReportSectionacc5f42f533380d008e0
