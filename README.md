@@ -1,8 +1,19 @@
 # BI 360 Project
 
 ## Problem Statement
-AtliQ Technologies, a swiftly expanding electronics company, incurred significant losses in Latin America attributed to their reliance on Excel files and decisions made based on intuition. Also, The rising competition in the consumer electronics sector prompted the company to embrace data analytics and adopt decision-making based on data insights.
+AtliQ Technologies, a swiftly expanding electronics company, incurred significant losses in Latin America attributed to their reliance on Excel files and decisions made based on intuition in the Annual Strategic Meeting. Also, The rising competition in the consumer electronics sector prompted the company to embrace data analytics and adopt decision-making based on data insights.
 
+## About AtliQ Technologies
+- AtliQ Technologies is a computer and perepherals manufacturing across the world which manufactures PC, Laptops, Mouse, Keyboard, etc.
+- AtliQ's customers are companies like Croma, Best Buy, Staples, Flipkart, Amazon, Neptune.
+- AtliQ's has customers on two Platforms
+    - Brick and Mortar (Physical)
+    - E-Commerce
+ - AtliQ sells products to their customers through three Channels
+    - Retailer (Both Physical and E-Commerce customers)
+    - Direct (AtliQ's own Physical and Ecommerce store i.e., AtliQ e-store and AtliQ executive)
+    - Distributer (Neptune in China)
+  
 ## Objective
 The objective of this project is to build an enterpeise wide business intelligence and data driven decision making dashboard giving the insights about finance, sales, marketing and supply chanin sectors of the businesses happening globally.
 
