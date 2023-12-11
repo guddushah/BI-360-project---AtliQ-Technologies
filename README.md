@@ -164,47 +164,79 @@ IF([GM % Variance]>=res,1,0)
 28. **Net Error LY** = CALCULATE([Net Error],SAMEPERIODLASTYEAR(dim_date[date]))
 29. **Net Profit %** = DIVIDE([Net Profit $],[NS $],0)
 30. **Net Profit % LY** = CALCULATE([Net Profit %], SAMEPERIODLASTYEAR(dim_date[date]))
-Net Profit $ = [GM $]+[Operational Expense $]
-NIS $ = SUM(fact_actuals_estimates[net_invoice_sales_amount])
-NP % BM =
-SWITCH(TRUE(),
-SELECTEDVALUE(‘Set BM'[ID])=1, [Net Profit % LY],
-SELECTEDVALUE(‘Set BM'[ID])=2, [NP Target %])
-NP Target % = DIVIDE([NP Target $], SUM(NsGmTarget[np_target]), 0)
-NP Target $ = SUM(NsGmTarget[np_target])
-NS $ = SUM(fact_actuals_estimates[net_sales_amount])
-NS $ LY = CALCULATE([NS $], SAMEPERIODLASTYEAR(dim_date[date]))
-NS BM $ =
-SWITCH(TRUE(),
-SELECTEDVALUE(‘Set BM'[ID])=1,[NS $ LY],
-SELECTEDVALUE(‘Set BM'[ID])=2,[NS Target $])
-NS Target $ =
-var tgt = SUM(NsGmTarget[ns_target])
-return IF([Customer / Product Filter Check], BLANK(), tgt)
-Operational Expense $ = ([Ads & Promotions $]+[Other Operational Expense $])*-1
-Other Cost $ = SUM(fact_actuals_estimates[other_cost])
-Other Operational Expense $ = SUM(‘fact_actuals_estimates'[other_operational_expense])
-Performance Visual Title = [Selected P & L Row] & ” Performance Over Time”
-Post Invoice Deduction $ = SUM(fact_actuals_estimates[post_invoice_deductions_amount])
-Post Invoice Other Deduction $ = SUM(fact_actuals_estimates[post_invoice_other_deductions_amount])
-Pre Invoice Deduction $ = [GS $] – [NIS $]
-Quantity = SUM(fact_actuals_estimates[Qty])
-RC % = DIVIDE([NS $],CALCULATE([NS $],ALL(dim_market), ALL(dim_customer), ALL(dim_product)))
-Risk = IF([Net Error]>0,”EI”, IF([Net Error]<0, “OOS”, BLANK()))
-Sales Qty = CALCULATE([Quantity], fact_actuals_estimates[date]<=MAX(LastSalesMonth[LastSalesMonth]))
-Sales Trend Title = “NS & GM % For ” & SELECTEDVALUE(dim_customer[customer])
-Selected P & L Row = IF(HASONEVALUE(‘P & L Rows'[Description]), SELECTEDVALUE(‘P & L Rows'[Description]), “Net Sales”)
-Top / Bottom N Title = “Top / Bottom Products & Customers By ” & [Selected P & L Row]
-Total COGS $ = ‘Key Measure'[Freight Cost $] + ‘Key Measure'[Manufacturing Cost $] + ‘Key Measure'[Other Cost $]
-Total Post Invoice Deduction = ‘Key Measure'[Post Invoice Deduction $] + ‘Key Measure'[Post Invoice Other Deduction $]
-post_invoice_deductions_amount =
-var res = CALCULATE(MAX(post_invoice_deductions[discounts_pct]),
-RELATEDTABLE(post_invoice_deductions))
-return res*fact_actuals_estimates[net_invoice_sales_amount]
-post_invoice_other_deductions_amount =
-var res = CALCULATE(MAX(post_invoice_deductions[other_deductions_pct]),
-RELATEDTABLE(post_invoice_deductions))
-return res*fact_actuals_estimates[net_invoice_sales_amount]
-
-
-
+31. **Net Profit % Target** = DIVIDE([NP Target $],SUM(NsGmTarget[ns_target]),0)
+32. Net Profit $ = [GM $]+[Operational Expense $]
+33. **NIS $** = SUM(fact_actuals_estimates[net_invoice_sales_amount])
+34. **NP % BM** =                      
+SWITCH(TRUE(),                         
+SELECTEDVALUE(‘Set BM'[ID])=1, [Net Profit % LY],                      
+SELECTEDVALUE(‘Set BM'[ID])=2, [NP Target %])                       
+35. **NP Target %** = DIVIDE([NP Target $], SUM(NsGmTarget[np_target]), 0)
+36. **NP Target $** = SUM(NsGmTarget[np_target])
+37. **NS $** = SUM(fact_actuals_estimates[net_sales_amount])
+38. **NS $ LY** = CALCULATE([NS $], SAMEPERIODLASTYEAR(dim_date[date]))
+39. **NS Target $** =                           
+var tgt = SUM(NsGmTarget[ns_target])                            
+return IF([Customer / Product Filter Check], BLANK(), tgt)                                
+40. **Operational Expense $** = ([Ads & Promotions $]+[Other Operational Expense $])*-1
+41. **Other Cost $** = SUM(fact_actuals_estimates[other_cost])
+42. **Other Operational Expense $** = SUM(‘fact_actuals_estimates'[other_operational_expense])
+43. **P & L BM** =                       
+SWITCH(TRUE(),                            
+SELECTEDVALUE('Set BM'[ID])=1,[P & L LY],                          
+SELECTEDVALUE('Set BM'[ID])=2,[P & L Val Target])                                                 
+44. **P & L Chg** =                            
+var res = [P & L Val]-[P & L BM]                           
+return IF([P & L BM]=BLANK() || [P & L Val]=BLANK(),BLANK(),res)                            
+45. **P & L Chg %** = DIVIDE([P & L Chg], [P & L BM], 0) * 100
+46. **P & L Final Value** = SWITCH(TRUE(),                                     
+SELECTEDVALUE(fiscal_year[fy_desc])=MAX('P & L Columns'[Col Header]),[P & L Val],                             
+MAX('P & L Columns'[Col Header])="BM",[P & L BM],                        
+MAX('P & L Columns'[Col Header])="Chg",[P & L Chg],                         
+MAX('P & L Columns'[Col Header])="Chg %",[P & L Chg %]                           
+)                           
+47. **P & L LY** = CALCULATE([P & L Val], SAMEPERIODLASTYEAR(dim_date[date]))
+48. **P & L Val** =                      
+var res = SWITCH(TRUE(),                                
+MAX('P & L Rowss'[Order])=1,[GS $]/1000000,                              
+MAX('P & L Rowss'[Order])=2, [Pre Invoive Deduction $]/1000000,                         
+MAX('P & L Rowss'[Order])=3, [NIS $]/1000000,                          
+MAX('P & L Rowss'[Order])=4, [Post Invoive Deduction $]/1000000,                             
+MAX('P & L Rowss'[Order])=5, [Post Invoive Other Deduction $]/1000000,                            
+MAX('P & L Rowss'[Order])=6, [Post Invoive Total Deduction $]/1000000,                          
+MAX('P & L Rowss'[Order])=7, [NS $]/1000000,                             
+MAX('P & L Rowss'[Order])=8, [Manufacturing Cost $]/1000000,                               
+MAX('P & L Rowss'[Order])=9, [Fright Cost $]/1000000,                             
+MAX('P & L Rowss'[Order])=10, [Other Cost $]/1000000,                                 
+MAX('P & L Rowss'[Order])=11, [Total COGS $]/1000000,                           
+MAX('P & L Rowss'[Order])=12, [GM $]/1000000,                           
+MAX('P & L Rowss'[Order])=13, [GM %]*100,                       
+MAX('P & L Rowss'[Order])=14, [GM / Unit],                          
+MAX('P & L Rowss'[Order]) =15, [Operational Expense $]/1000000,                             
+MAX('P & L Rowss'[Order]) =16, [Net Profit]/1000000,                          
+MAX('P & L Rowss'[Order]) =17, [Net Profit %]*100                              
+)                              
+return                                   
+IF(HASONEVALUE('P & L Rowss'[Description]),res,[NS $]/1000000)                                      
+49. **P & L Val Target** =                              
+var res = SWITCH(TRUE(),                               
+MAX('P & L Rowss'[Order])=7, [NS Target $]/1000000,                             
+MAX('P & L Rowss'[Order])=12, [GM Target $]/1000000,                         
+MAX('P & L Rowss'[Order])=13, [GM % Target]*100,                                
+MAX('P & L Rowss'[Order]) =17, [Net Profit % Target]*100                          
+)                         
+return                                 
+IF(HASONEVALUE('P & L Rowss'[Description]),res,[NS Target $]/1000000)                            
+50. **Performance Visual Title** = [Selected P & L Row] & ” Performance Over Time”
+51. **Post Invoice Deduction $** = SUM(fact_actuals_estimates[post_invoice_deductions_amount])
+52. **Post Invoice Other Deduction $** = SUM(fact_actuals_estimates[post_invoice_other_deductions_amount])
+53. **Pre Invoice Deduction $** = [GS $] – [NIS $]
+54. **Quantity** = SUM(fact_actuals_estimates[Qty])
+55. **RC %** = DIVIDE([NS $],CALCULATE([NS $],ALL(dim_market), ALL(dim_customer), ALL(dim_product)))
+56. **Risk** = IF([Net Error]>0,”EI”, IF([Net Error]<0, “OOS”, BLANK()))
+57. **Sales Qty** = CALCULATE([Quantity], fact_actuals_estimates[date]<=MAX(LastSalesMonth[LastSalesMonth]))
+58. **Sales Trend Title** = “NS & GM % For ” & SELECTEDVALUE(dim_customer[customer])
+59. **Selected P & L Row** = IF(HASONEVALUE(‘P & L Rows'[Description]), SELECTEDVALUE(‘P & L Rows'[Description]), “Net Sales”)
+60. **Top / Bottom N Title** = “Top / Bottom Products & Customers By ” & [Selected P & L Row]
+61. **Total COGS $** = ‘Key Measure'[Freight Cost $] + ‘Key Measure'[Manufacturing Cost $] + ‘Key Measure'[Other Cost $]
+62. **Total Post Invoice Deduction** = ‘Key Measure'[Post Invoice Deduction $] + ‘Key Measure'[Post Invoice Other Deduction $]
