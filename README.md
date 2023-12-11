@@ -153,16 +153,17 @@ IF([GM % Variance]>=res,1,0)
 18. **GM % Target** = DIVIDE([GM Target $],SUM(NsGmTarget[ns_target]),0)
 19. **GM % Variance** = [GM % BM] - [GM %]
 20. **GM $** = [NS $]-[Total COGS $]
-21. **GS $** = SUM(fact_actuals_estimates[gross_sales_amount])                              
-22. **Last Sales Month Home** =
-“Sales Data Loaded Until : ” & FORMAT(MAX(LastSalesMonth[LastSalesMonth]), “MMM YY”)
-Manufacturing Cost $ = SUM(fact_actuals_estimates[manufacturing_cost])
-Market Share % = DIVIDE(SUM(marketshare[sales_$]),SUM(marketshare[total_market_sales_$]), 0)
-Net Error = [Forecast Qty]-[Sales Qty]
-Net Error % = DIVIDE([Net Error],[Forecast Qty],0)
-Net Error LY = CALCULATE([Net Error],SAMEPERIODLASTYEAR(dim_date[date]))
-Net Profit % = DIVIDE([Net Profit $],[NS $],0)
-Net Profit % LY = CALCULATE([Net Profit %], SAMEPERIODLASTYEAR(dim_date[date]))
+21. **GM Target $** = SUM(NsGmTarget[gm_target])
+22. **GS $** = SUM(fact_actuals_estimates[gross_sales_amount])                              
+23. **Last Sales Month Footer** =                           
+“Sales Data Loaded Until : ” & FORMAT(MAX(LastSalesMonth[LastSalesMonth]), “MMM YY”)                             
+24. **Manufacturing Cost $** = SUM(fact_actuals_estimates[manufacturing_cost])
+25. **Market Share %** = DIVIDE(SUM(marketshare[sales_$]),SUM(marketshare[total_market_sales_$]), 0)
+26. **Net Error** = [Forecast Qty]-[Sales Qty]
+27. **Net Error %** = DIVIDE([Net Error],[Forecast Qty],0)
+28. **Net Error LY** = CALCULATE([Net Error],SAMEPERIODLASTYEAR(dim_date[date]))
+29. **Net Profit %** = DIVIDE([Net Profit $],[NS $],0)
+30. **Net Profit % LY** = CALCULATE([Net Profit %], SAMEPERIODLASTYEAR(dim_date[date]))
 Net Profit $ = [GM $]+[Operational Expense $]
 NIS $ = SUM(fact_actuals_estimates[net_invoice_sales_amount])
 NP % BM =
