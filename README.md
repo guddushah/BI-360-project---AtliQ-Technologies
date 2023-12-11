@@ -90,6 +90,18 @@ https://app.powerbi.com/view?r=eyJrIjoiMjk0ZDQwOTctMzkzNi00ZGVmLWFmZGUtMjI3YTA1N
 - DAX Studio
 - Power BI Service
 
+### Power BI Features Learned
+- Power Query M Language
+- DAX Formulas
+- Data Modeling
+- Table Creation
+- Creating Tool Tips
+- Creating Switch using Bookmark
+- Learnt using conditional formatting for the blank results after applying filters
+- Creating Dynamic Last Refresh Date
+- Creation Of Different Views in a single report for different departments
+- Deploying the fully working Dashboard in Cloud.
+
 ### Domain related terms understanding
 - Gross Price
 - Pre-Invoice deductions
