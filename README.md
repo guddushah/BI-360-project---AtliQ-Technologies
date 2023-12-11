@@ -124,14 +124,13 @@ https://app.powerbi.com/view?r=eyJrIjoiMjk0ZDQwOTctMzkzNi00ZGVmLWFmZGUtMjI3YTA1N
     - Net Profit (NP)
  
 ## Measures Created using DAX
-1. ABS Error = SUMX(DISTINCT(dim_date[date]),                   
-               SUMX(DISTINCT(dim_product[product_code]), ABS([Net Error]))                  
-               )                   
-ABS Error % = DIVIDE([ABS Error], [Forecast Qty], 0)
-ABS Error LY = CALCULATE([ABS Error],SAMEPERIODLASTYEAR(dim_date[date]))
-Ads & Promotions $ = SUM(‘fact_actuals_estimates'[ads_promotions])
-Atliq MS % = CALCULATE([Market Share %], marketshare[manufacturer]=”atliq”)
-BM Message = IF([NS BM $] = BLANK() || [GM % BM] = BLANK() || [NP % BM] = BLANK(), “BM Target is not available for the selected filters”, “”)
+1. **ABS Error** = SUMX(DISTINCT(dim_date[date]),                   
+               SUMX(DISTINCT(dim_product[product_code]), ABS([Net Error])))                                       
+2. **ABS Error %** = DIVIDE([ABS Error], [Forecast Qty], 0)
+3. **ABS Error LY** = CALCULATE([ABS Error],SAMEPERIODLASTYEAR(dim_date[date]))
+4. **Ads & Promotions $** = SUM(‘fact_actuals_estimates'[ads_promotions])
+5. **Atliq MS %** = CALCULATE([Market Share %], marketshare[manufacturer]=”atliq”)
+6. **BM Message** = IF([NS BM $] = BLANK() || [GM % BM] = BLANK() || [NP % BM] = BLANK(), “BM Target is not available for the selected filters”, “”)
 Customer / Product Filter Check = ISCROSSFILTERED(dim_product[product]) || ISFILTERED(dim_customer[customer])
 Forecast Accuracy % = IF([ABS Error %]<>BLANK(), 1 – [ABS Error %], BLANK())
 Forecast Accuracy % LY = CALCULATE([Forecast Accuracy %], SAMEPERIODLASTYEAR(dim_date[date]))
