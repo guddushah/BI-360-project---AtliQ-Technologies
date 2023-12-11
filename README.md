@@ -71,7 +71,9 @@ https://app.powerbi.com/view?r=eyJrIjoiMjk0ZDQwOTctMzkzNi00ZGVmLWFmZGUtMjI3YTA1N
 - The Supply Chain View is used by the Supply Chain Team to meet the customer demands to avoid excessive or insufficient production.
 - Supply Chain is one of the most important department of the business which helps in maintaining the operational cost.
 - If excess inventory is produced, then there is cost associated with that inventory for storing and maintaining in the warehouse and not having enough inventory during the demand, the there will be out of stock situation which is not healthy for the business. Therefore, the SC team should always be aware of overproduction and underproduction.
-- 
+- The SC View has 3 KPI's comparing Forecast Accuracy, Net Error and ABS Error with last year.
+- It also shows the Net Error Trend by month compared with the last year.
+- From the dashboard we can visualize the Forecast accuracy of 2021 was better than 2020. 
 
 ### Executive View
 ![executiveView](https://github.com/guddushah/BI-360-project-AtliQ-Technologies-PowerBI/assets/40028193/7c20b20b-0562-4436-8998-4b058cc84dcb)
