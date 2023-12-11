@@ -123,7 +123,7 @@ https://app.powerbi.com/view?r=eyJrIjoiMjk0ZDQwOTctMzkzNi00ZGVmLWFmZGUtMjI3YTA1N
     - Operational Expense
     - Net Profit (NP)
  
-## Measures Created using DAX
+## Measures Created using DAX Formula
 1. **ABS Error** = SUMX(DISTINCT(dim_date[date]),                   
                SUMX(DISTINCT(dim_product[product_code]), ABS([Net Error])))                                       
 2. **ABS Error %** = DIVIDE([ABS Error], [Forecast Qty], 0)
@@ -131,16 +131,30 @@ https://app.powerbi.com/view?r=eyJrIjoiMjk0ZDQwOTctMzkzNi00ZGVmLWFmZGUtMjI3YTA1N
 4. **Ads & Promotions $** = SUM(‘fact_actuals_estimates'[ads_promotions])
 5. **Atliq MS %** = CALCULATE([Market Share %], marketshare[manufacturer]=”atliq”)
 6. **BM Message** = IF([NS BM $] = BLANK() || [GM % BM] = BLANK() || [NP % BM] = BLANK(), “BM Target is not available for the selected filters”, “”)
-Customer / Product Filter Check = ISCROSSFILTERED(dim_product[product]) || ISFILTERED(dim_customer[customer])
-Forecast Accuracy % = IF([ABS Error %]<>BLANK(), 1 – [ABS Error %], BLANK())
-Forecast Accuracy % LY = CALCULATE([Forecast Accuracy %], SAMEPERIODLASTYEAR(dim_date[date]))
-Forecast Qty =
-var lsalesdate = MAX(LastSalesMonth[LastSalesMonth])
-return
+7. **Customer / Product Filter Check** = ISCROSSFILTERED(dim_product[product]) || ISFILTERED(dim_customer[customer])
+8. **Forecast Accuracy %** = IF([ABS Error %]<>BLANK(), 1 – [ABS Error %], BLANK())
+9. **Forecast Accuracy % LY** = CALCULATE([Forecast Accuracy %], SAMEPERIODLASTYEAR(dim_date[date]))
+10. **Forecast Qty** =                              
+var lsalesdate = MAX(LastSalesMonth[LastSalesMonth])                                
+return                                                                                          
 CALCULATE(SUM(fact_forecast_monthly[forecast_quantity]), fact_forecast_monthly[date]<=lsalesdate
-Freight Cost $ = SUM(fact_actuals_estimates[Freight_cost])
-GS $ = SUM(fact_actuals_estimates[gross_sales_amount])
-Last Sales Month Home =
+11. **Freight Cost $** = SUM(fact_actuals_estimates[Freight_cost])
+12. **GM / Unit** = ([GM $]/[Quantity])
+13. **GM %** = DIVIDE([GM $],[NS $],0)
+14. **GM % BM** =                              
+SWITCH(TRUE(),                             
+SELECTEDVALUE('Set BM'[ID])=1,[GM % LY],                             
+SELECTEDVALUE('Set BM'[ID])=2,[GM % Target])                       
+16. **GM % Filter** =                            
+var res = SELECTEDVALUE('Target Gap Tolerance'[Target Gap Tolerance])                            
+return                        
+IF([GM % Variance]>=res,1,0)                   
+17. **GM % LY** = CALCULATE([GM %], SAMEPERIODLASTYEAR(dim_date[date]))
+18. **GM % Target** = DIVIDE([GM Target $],SUM(NsGmTarget[ns_target]),0)
+19. **GM % Variance** = [GM % BM] - [GM %]
+20. **GM $** = [NS $]-[Total COGS $]
+21. **GS $** = SUM(fact_actuals_estimates[gross_sales_amount])                              
+22. **Last Sales Month Home** =
 “Sales Data Loaded Until : ” & FORMAT(MAX(LastSalesMonth[LastSalesMonth]), “MMM YY”)
 Manufacturing Cost $ = SUM(fact_actuals_estimates[manufacturing_cost])
 Market Share % = DIVIDE(SUM(marketshare[sales_$]),SUM(marketshare[total_market_sales_$]), 0)
