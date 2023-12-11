@@ -77,6 +77,11 @@ https://app.powerbi.com/view?r=eyJrIjoiMjk0ZDQwOTctMzkzNi00ZGVmLWFmZGUtMjI3YTA1N
 
 ### Executive View
 ![executiveView](https://github.com/guddushah/BI-360-project-AtliQ-Technologies-PowerBI/assets/40028193/7c20b20b-0562-4436-8998-4b058cc84dcb)
+- The Executive View is for the senior Stakeholders like CEO, CTO, Managers who wants to see the quick insights on every aspects of the business on every departments.
+- The Executive consists 4 KPI's NS, GM %, Net Profit %, Forecast Accuracy %, Revenue by Channel and Division, key insights by division.
+- It also has Year over Year trend by NS, Net Profit %, GM %, Market Share.
+- Is shows PC Market share for AtliQ and competitors.
+- The View shows Top 5 Customers and Products by Revenue.
 
 ### Tools Used
 - MySQL
