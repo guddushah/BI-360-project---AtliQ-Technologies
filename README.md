@@ -240,3 +240,5 @@ IF(HASONEVALUE('P & L Rowss'[Description]),res,[NS Target $]/1000000)
 60. **Top / Bottom N Title** = “Top / Bottom Products & Customers By ” & [Selected P & L Row]
 61. **Total COGS $** = ‘Key Measure'[Freight Cost $] + ‘Key Measure'[Manufacturing Cost $] + ‘Key Measure'[Other Cost $]
 62. **Total Post Invoice Deduction** = ‘Key Measure'[Post Invoice Deduction $] + ‘Key Measure'[Post Invoice Other Deduction $]
+
+#### This project taught me, creating a report is not enough for a Data Analyst. Technical Skills, Soft skills, being a good team player, a problem-solving mindset and get it done attitude are also needed to perform any task in this role.
