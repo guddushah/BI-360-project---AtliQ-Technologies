@@ -83,14 +83,14 @@ https://app.powerbi.com/view?r=eyJrIjoiMjk0ZDQwOTctMzkzNi00ZGVmLWFmZGUtMjI3YTA1N
 - Is shows PC Market share for AtliQ and competitors.
 - The View shows Top 5 Customers and Products by Revenue.
 
-### Tools Used
+## Tools Used
 - MySQL
 - Power BI Desktop
 - MS. Excel
 - DAX Studio
 - Power BI Service
 
-### Power BI Features Learned
+## Power BI Features Learned
 - Power Query M Language
 - DAX Formulas
 - Data Modeling
@@ -102,16 +102,26 @@ https://app.powerbi.com/view?r=eyJrIjoiMjk0ZDQwOTctMzkzNi00ZGVmLWFmZGUtMjI3YTA1N
 - Creation Of Different Views in a single report for different departments
 - Deploying the fully working Dashboard in Cloud.
 
-### Domain related terms understanding
-- Gross Price
-- Pre-Invoice deductions
-- Net Invoice Sales
-- Post-Invoice deductions
-- Net Sales
-- COGs (Cost of Goods Sold)
-- Gross Margin
-- Operational Expense
-- Net Profit
+## Project based Learnings
+- Power BI
+- Data Modelling
+- Dashboard Creation & Designing
+- Project Charter
+- Stakeholder Mapping
+- Going through P&L Statements
+- Working on business transactions like creating Profit %, Gross Margin %, Forecast %, comparison in sales from previous periods etc.
+- The learning from this project was not limited to Power BI. The project has a business scenario where one has to go through the P & L statements where we needed to compare the performance of the products, product categories, markets, customers etc.
+- From providing the stats of finance to the performance of products in different markets among different customers is measured and displayed on the dashboards.
+- Understanding Financial terms like
+    - Gross Price
+    - Pre-Invoice deductions
+    - Net Invoice Sales
+    - Post-Invoice deductions
+    - Net Sales (NS)
+    - Cost of Goods Sold (COGS)
+    - Gross Margin (GM)
+    - Operational Expense
+    - Net Profit (NP)
 
 
 
