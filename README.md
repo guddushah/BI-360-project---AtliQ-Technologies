@@ -36,7 +36,7 @@ AtliQ Technologies, a swiftly expanding electronics company, incurred significan
 11. Actively integrated suggestions and modifications from end-users to improve the dashboards' usefulness.
   
 ## Dashboard Live here
-https://app.powerbi.com/view?r=eyJrIjoiMjk0ZDQwOTctMzkzNi00ZGVmLWFmZGUtMjI3YTA1NmVmYzkwIiwidCI6Ijc5OWU3OTRjLTllYWMtNGUxZi05ZjY0LTE0ODhjYjMyMjRlNiJ9&pageName=ReportSectionacc5f42f533380d008e0
+https://app.powerbi.com/view?r=eyJrIjoiNDZjZDZiYzctZDUzYS00ZTI3LTg2NDktMDFlZGFmZmE0MzYxIiwidCI6IjdlNTIyZTlmLTE0MTAtNDI2My1iOTM2LTkxNTJhNTkyNTY3MSJ9
 
 ## Created Dashboard
 - The created Dashboard basically contains 5 Views - Finance View, Sales View, Marketing View, Supply Chain View and Executive View for serving several stakeholders requirements
